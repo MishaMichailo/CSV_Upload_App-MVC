@@ -6,15 +6,13 @@
 
     function displayContacts() {
         const tbody = document.querySelector("#contactsTable tbody");
-        tbody.innerHTML = ""; // Clear the table before adding new rows
+        tbody.innerHTML = ""; 
 
         const start = (currentPage - 1) * rowsPerPage;
         const end = start + rowsPerPage;
 
-        // Add only 10 contacts to the table
         filteredContacts.slice(start, end).forEach(row => tbody.appendChild(row));
 
-        // Update pagination buttons
         document.getElementById("prevPage").disabled = currentPage === 1;
         document.getElementById("nextPage").disabled = end >= filteredContacts.length;
 
@@ -34,7 +32,7 @@
             });
         }
 
-        currentPage = 1; // Reset to the first page after filter change
+        currentPage = 1; 
         displayContacts();
     });
 
@@ -52,5 +50,5 @@
         }
     });
 
-    displayContacts(); // Initial display
+    displayContacts(); 
 });
