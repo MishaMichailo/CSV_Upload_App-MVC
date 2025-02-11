@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSV_Upload_App", "CSV_Upload_App.csproj", "{0455FF60-41CB-49AF-A0A4-F62876356724}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingCsvFile", "..\CreatingCsvFile\CreatingCsvFile.csproj", "{0CBD251A-F7F5-4129-AF6A-13E85B258EC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0455FF60-41CB-49AF-A0A4-F62876356724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0455FF60-41CB-49AF-A0A4-F62876356724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0455FF60-41CB-49AF-A0A4-F62876356724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0455FF60-41CB-49AF-A0A4-F62876356724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CBD251A-F7F5-4129-AF6A-13E85B258EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CBD251A-F7F5-4129-AF6A-13E85B258EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CBD251A-F7F5-4129-AF6A-13E85B258EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CBD251A-F7F5-4129-AF6A-13E85B258EC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4DCBADC-785D-4712-9382-E79E3CCAAD7F}
+	EndGlobalSection
+EndGlobal
