@@ -1,41 +1,33 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("categoryFilter").addEventListener("change", filterByCategory);
-});
-
-function filterByCategory() {
-    const selectedCategory = document.getElementById("categoryFilter").value;
-    const rows = document.querySelectorAll("#contactsTable tbody tr");
-
-    rows.forEach(row => {
-        const category = row.dataset.category;
-        row.style.display = selectedCategory === "" || category === selectedCategory ? "" : "none";
-    });
-}
-
-function openEditModal(id, name, dob, married, phone, salary, category) {
+﻿// Функція для відкриття модального вікна редагування
+function openEditModal(id, name, dob, married, phone, salary) {
+    const modal = document.getElementById("editModal");
+    if (!modal) {
+        console.error("Modal element not found!");
+        return;
+    }
+    modal.style.display = "block";
     document.getElementById("editId").value = id;
     document.getElementById("editName").value = name;
     document.getElementById("editDateOfBirth").value = dob;
-    document.getElementById("editMarried").checked = married;
+    document.getElementById("editMarried").checked = married === "true"; // Перетворюємо на булеве значення
     document.getElementById("editPhone").value = phone;
     document.getElementById("editSalary").value = salary;
-    document.getElementById("editCategory").value = category;
-    document.getElementById("editModal").style.display = "block";
 }
 
+// Закриття модального вікна
 function closeEditModal() {
     document.getElementById("editModal").style.display = "none";
 }
 
+// Збереження змін після редагування
 function saveEdit() {
     const id = document.getElementById("editId").value;
     const updatedContact = {
         Name: document.getElementById("editName").value,
         DateOfBirth: document.getElementById("editDateOfBirth").value,
-        Married: document.getElementById("editMarried").checked,
+        Married: document.getElementById("editMarried").checked, 
         Phone: document.getElementById("editPhone").value,
-        Salary: parseFloat(document.getElementById("editSalary").value),
-        Category: document.getElementById("editCategory").value
+        Salary: parseFloat(document.getElementById("editSalary").value)
     };
 
     fetch(`/CsvUpload/EditCsvFile/${id}`, {
